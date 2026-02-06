@@ -1,29 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lemma - Editing/Input</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!-- ..HEADER.. -->
-         <hr>
-         <h1>Editing / Input</h1>
-         <hr>
 
-         <div id="box_input">
-            <p>Parola in italiano</p>
-            <input type="text" placeholder="Inserisci parola" id="input_parola_inserita">
-            <p>Traduzione</p>
-            <input type="text" placeholder="Inserisci traduzione" id="input_traduzione_parola">
-            <p>Inserisci audio con pronuncia</p>
-            <input type="file" placeholder="Inserisci file audio" accept="audio" id="input_fileAudio">
-            <p>Esempio</p>
-            <input type="text" placeholder="Inserisci esempio" id="input_esempio"> <br><br>
-            <button>Invia richiesta</button>
-         </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemma - Editing/Input</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <!-- ..FOOTER.. -->
-    </body>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>EDITING/INPUT</li>
+                <li>RICERCA ARCHIVIO</li>
+                <li>INFO/GUIDA</li>
+            </ul>
+        </nav>
+        <img src="Immages/Trentino_CoA.svg" alt="Stemma Trentino" width="50">
+    </header>
+
+    <hr style="border: none; border-top: 5px solid #D30019; margin: 20px 0;"> <!-- Red separator -->
+
+    <div style="text-align: center;">
+        <h1>Editing / Input</h1>
+    </div>
+
+    <hr style="border: none; border-top: 5px solid #D30019; margin: 20px 0;"> <!-- Red separator -->
+
+    <div id="box_input" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+        <p>Parola in italiano</p>
+        <input type="text" placeholder="Inserisci parola" id="input_parola_inserita"
+            style="width: 100%; padding: 10px; margin-bottom: 10px;">
+        <p>Traduzione</p>
+        <input type="text" placeholder="Inserisci traduzione" id="input_traduzione_parola"
+            style="width: 100%; padding: 10px; margin-bottom: 10px;">
+        <p>Inserisci audio con pronuncia</p>
+        <input type="file" placeholder="Inserisci file audio" accept="audio" id="input_fileAudio"
+            style="margin-bottom: 10px;">
+        <p>Esempio</p>
+        <input type="text" placeholder="Inserisci esempio" id="input_esempio"
+            style="width: 100%; padding: 10px; margin-bottom: 20px;">
+        <button
+            style="background-color: #D30019; color: white; border: none; padding: 10px 20px; cursor: pointer;">Invia
+            richiesta</button>
+    </div>
+
+    <footer>
+        <img src="Immages/Trentino_CoA.svg" alt="Stemma TrentinoFooter" width="50">
+
+        <section style="border: none;">
+            <h4>DIRITTI E COPYRIGHT</h4>
+            <p>© 2026 Parole Trentine. All Rights Reserved.</p>
+        </section>
+
+        <section style="border: none;">
+            <h4>CONTATTI</h4>
+            <p>e-mail:</p>
+            <p>+39 000 0000 000</p>
+            <p>@instagram.username</p>
+        </section>
+
+        <section style="border: none;">
+            <h4>PAGINE:</h4>
+            <ul>
+                <li>Ricerca nell'archivio</li>
+                <li>Chi Siamo</li>
+                <li>Edit/Input</li>
+                <li>Info/Guida</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+
 </html>
