@@ -23,7 +23,7 @@ nav ul li {
 
 /* Header */
 header {
-    background-color: #D30019;
+    background-color: #A30046;
     /* Red */
     color: white;
     padding: 10px 20px;
@@ -60,9 +60,9 @@ section {
 
 /* Chi Siamo Section */
 section:first-of-type {
-    border-top: 5px solid #D30019;
+    border-top: 5px solid #A30046;
     /* Red Top Border */
-    border-bottom: 5px solid #D30019;
+    border-bottom: 5px solid #A30046;
     /* Red Bottom Border */
     text-align: center;
     margin-top: 20px;
@@ -118,7 +118,7 @@ article p {
 
 /* Il Progetto & Fonti Sections */
 main>section:not(:first-of-type) {
-    border-top: 5px solid #D30019;
+    border-top: 5px solid #A30046;
     /* Red Divider */
     text-align: left;
     padding-top: 40px;
@@ -147,7 +147,7 @@ main>section:not(:first-of-type) p {
 
 /* Footer */
 footer {
-    background-color: #D30019;
+    background-color: #A30046;
     color: white;
     padding: 40px 20px;
     display: flex;
