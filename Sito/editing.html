@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lemma - Editing/Input</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style_editing.css">
     </head>
     <body>git 
         <header>
@@ -19,22 +19,26 @@
             <img src="Immages/Trentino_CoA.svg" alt="Stemma" width="50">
         </header>
 
-         <hr style="border: none; height: 8px; background-color: #e30613; margin: 3px auto 5px auto;">
-         <h1 style="text-align: center;">Editing / Input</h1>
-         <hr style="border: none; height: 8px; background-color: #e30613; margin: 3px auto 5px auto;">
+         <hr>
+         <h1 style="text-align: center;">Suggerisci una modifica</h1>
+         <hr>
 
          <br>
-         <div id="box_input" style="display: flex; flex-direction: column; align-items: center; text-align: center; border: 2px solid; border-radius: 10px; width: 300px; padding: 20px; margin: 0 auto;">
-            <p style="font-weight: bold;">Parola in italiano</p>
+         <div id="box_input">
+            <p>Parola in italiano</p>
             <input type="text" placeholder="Inserisci parola" id="input_parola_inserita">
-            <br><p style="font-weight: bold;">Traduzione</p>
+            <br><p>Traduzione</p>
             <input type="text" placeholder="Inserisci traduzione" id="input_traduzione_parola">
-            <br><p style="font-weight: bold;">Inserisci audio con pronuncia</p>
+            <br><p>Inserisci audio con pronuncia</p>
             <input type="file" accept="audio/*" id="input_fileAudio">
-            <br><p style="font-weight: bold;">Esempio</p>
-            <input type="text" placeholder="Inserisci esempio" id="input_esempio"> <br><br>
-            <button style="padding: 10px; border-image: linear-gradient(to right, #005696, #ffdf00) 1; font-weight: bold;">Invia richiesta</button>
+            <br><p>Esempio</p>
+            <input type="text" placeholder="Inserisci esempio" id="input_esempio">
+            <br><p>Immagine</p>
+            <input type="file" accept="image/*" id="input_fileImage"> <br><br>
+            <button id="btn_invio_sugg">Invia richiesta</button>
          </div>
+
+         <div id="temp_js"></div>
 
          <footer>
             <img src="Immages/Trentino_CoA.svg" alt="Stemma Footer" width="60">
@@ -61,5 +65,23 @@
                 </ul>
             </div>
         </footer>
+
+        <script>
+            let btn_invio = document.getElementById("btn_invio_sugg"); 
+            let div_temp_js = document.getElementById("temp_js"); 
+            btn_invio.addEventListener("click", function(){
+                let parola = document.getElementById("input_parola_inserita").value; 
+                let traduzione = document.getElementById("input_traduzione_parola").value; 
+                let esempio = document.getElementById("input_esempio").value; 
+                let fileAudio = document.getElementById("input_fileAudio").files[0] ? document.getElementById("input_fileAudio").files[0].name : "Nessun file"; 
+                let fileImage = document.getElementById("input_fileImage").files[0] ? document.getElementById("input_fileImage").files[0].name : "Nessun file";
+
+                let p = document.createElement("p"); 
+                p.innerText = `Parola: ${parola} | Traduzione: ${traduzione} | Esempio: ${esempio} | Audio: ${fileAudio} | Immagine: ${fileImage}`;
+                p.style = "text-align: center; font-weight: bold;"
+                div_temp_js.appendChild(p); 
+            }); 
+        </script>
+
     </body>
 </html>
